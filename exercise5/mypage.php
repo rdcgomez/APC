@@ -144,10 +144,24 @@
 			margin-top: 10px;
 			color: white;
 		}
+		button[type=submit] {
+			width: 100%;
+			background-color: #64D004;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		button[type=submit]:hover {
+			background-color: #45a049;
+		}
     </style>
 </head>
 
 <body>
+
 
 
 <p id="Greetings">Welcome To My Page!</p>
@@ -343,7 +357,7 @@ if(isset($_POST['btn-save']))
 
 </div>
 <div id="crud">
-<label>Hello There! Pls enter your information so i can store it inside my database! ^_^</label>
+<label>Hello There! Pls enter your information so i can store it inside my database before you leave. Thank You! ^_^</label>
     <form method="post">
     <table align="center">
     <tr>
@@ -359,13 +373,14 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
     <tr>
-    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    <td><button type="submit" name="btn-save"><strong>Save</strong></button></td>
     </tr>
     </table>
     </form>
 </div>
 
 </center>
+
 
 <h5>Here are some of my favorite websites.</h5>
 <a href="http://9gag.com/" target="_blank">9GAG</a>
