@@ -1,3 +1,13 @@
+//DATABASE CONFIGURATION PHP CODE
+<?php
+$host = "localhost";
+$user = "root";
+$password = "";
+$datbase = "dbtuts";
+$con = mysqli_connect($host,$user,$password);
+mysqli_select_db($con,$datbase);
+?>
+
 //ADDING DATA PHP CODE
 <?php
 include_once 'dbconfig.php';
@@ -34,6 +44,22 @@ if(isset($_POST['btn-save']))
  // sql query execution function
 }
 ?>
+
+
+// DELETING DATA PHP CODE
+<?php
+include_once 'dbconfig.php';
+
+// delete condition
+if(isset($_GET['delete_id']))
+{
+ $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+ mysqli_query($con,$sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+
 
 
 <!DOCTYPE html>
