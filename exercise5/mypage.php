@@ -1,77 +1,3 @@
-//DATABASE CONFIGURATION PHP CODE
-<?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$datbase = "dbtuts";
-$con = mysqli_connect($host,$user,$password);
-mysqli_select_db($con,$datbase);
-?>
-
-// DELETING DATA PHP CODE
-<?php
-include_once 'dbconfig.php';
-
-// delete condition
-if(isset($_GET['delete_id']))
-{
- $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
- mysqli_query($con,$sql_query);
- header("Location: $_SERVER[PHP_SELF]");
-}
-// delete condition
-?>
-
-
-//UPDATING DATA PHP CODE
-<?php
-include_once 'dbconfig.php';
-if(isset($_GET['edit_id']))
-{
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
- $result_set=mysqli_query($con,$sql_query);
- $fetched_row=mysqli_fetch_array($result_set);
-}
-if(isset($_POST['btn-update']))
-{
- //variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $city_name = $_POST['city_name'];
- // variables for input data
-
- // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
- // sql query for update data into database
- 
- // sql query execution function
- if(mysqli_query($con,$sql_query))
- {
-  ?>
-  <script type="text/javascript">
-  alert('Data Are Updated Successfully');
-  window.location.href='index.php';
-  </script>
-  <?php
- }
- else
- {
-  ?>
-  <script type="text/javascript">
-  alert('error occured while updating data');
-  </script>
-  <?php
- }
- // sql query execution function
-}
-if(isset($_POST['btn-cancel']))
-{
- header("Location: index.php");
-}
-?>
-
-
-
 
 <!DOCTYPE html>
 <html>
@@ -209,6 +135,13 @@ if(isset($_POST['btn-cancel']))
 			color: white;
 		}
 		.error {
+			color: white;
+		}
+		#crud {
+			border-radius: 5px;
+			background-color: #1F2837;
+			padding: 10px;
+			margin-top: 50px;
 			color: white;
 		}
     </style>
@@ -369,6 +302,218 @@ echo "<br>";
 echo $gender;
 ?>
 </div>
+
+<!--ADDING DATA-->
+<?php
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ // variables for input data
+
+ // sql query for inserting data into database
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ // sql query for inserting data into database
+ 
+ // sql query execution function
+ if(mysql_query($sql_query))
+ {
+  ?>
+  <script type="text/javascript">
+  alert('Data Are Inserted Successfully ');
+  window.location.href='index.php';
+  </script>
+  <?php
+ }
+ else
+ {
+  ?>
+  <script type="text/javascript">
+  alert('error occured while inserting your data');
+  </script>
+  <?php
+ }
+ // sql query execution function
+}
+?>
+<center>
+
+</div>
+<div id="crud">
+<label>Hello There! Pls enter the information below so that i would know who visited my page! ^_^</label>
+    <form method="post">
+    <table align="center">
+    <tr>
+   <!--<td align="center"><a href="index.php">Check the people who visited my page!</a></td>-->
+    </tr>
+    <tr>
+    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    </tr>
+    <tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    </tr>
+    </table>
+    </form>
+</div>
+
+</center>
+
+<!--DATABASE / VISITOR TABLE-->
+<?php
+include_once 'dbconfig.php';
+
+// delete condition
+if(isset($_GET['delete_id']))
+{
+ $sql_query="DELETE FROM users WHERE user_id=".$_GET['delete_id'];
+ mysql_query($sql_query);
+ header("Location: $_SERVER[PHP_SELF]");
+}
+// delete condition
+?>
+
+<script type="text/javascript">
+function edt_id(id)
+{
+ if(confirm('Sure to edit ?'))
+ {
+  window.location.href='edit_data.php?edit_id='+id;
+ }
+}
+function delete_id(id)
+{
+ if(confirm('Sure to Delete ?'))
+ {
+  window.location.href='index.php?delete_id='+id;
+ }
+}
+</script>
+</head>
+<body>
+<center>
+
+</div>
+
+<div id="crud">
+
+    <table align="center">
+    <tr>
+    <!--<th colspan="5"><a href="add_data.php">add data here.</a></th>-->
+    </tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>City Name</th>
+    <th colspan="2">Operations</th>
+    </tr>
+    <?php
+ $sql_query="SELECT * FROM users";
+ $result_set=mysqli_query($con,$sql_query);
+ while($row=mysqli_fetch_row($result_set))
+ {
+  ?>
+        <tr>
+        <td><?php echo $row[1]; ?></td>
+        <td><?php echo $row[2]; ?></td>
+        <td><?php echo $row[3]; ?></td>
+  <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
+        <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
+        </tr>
+        <?php
+ }
+ ?>
+    </table>
+    
+</div>
+
+</center>
+
+
+
+
+
+<!-- UPDATE FORM-->
+<?php
+include_once 'dbconfig.php';
+if(isset($_GET['edit_id']))
+{
+ $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
+ $result_set=mysql_query($sql_query);
+ $fetched_row=mysql_fetch_array($result_set);
+}
+if(isset($_POST['btn-update']))
+{
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ // variables for input data
+
+ // sql query for update data into database
+ $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name' WHERE user_id=".$_GET['edit_id'];
+ // sql query for update data into database
+ 
+ // sql query execution function
+ if(mysql_query($sql_query))
+ {
+  ?>
+  <script type="text/javascript">
+  alert('Data Are Updated Successfully');
+  window.location.href='index.php';
+  </script>
+  <?php
+ }
+ else
+ {
+  ?>
+  <script type="text/javascript">
+  alert('error occured while updating data');
+  </script>
+  <?php
+ }
+ // sql query execution function
+}
+if(isset($_POST['btn-cancel']))
+{
+ header("Location: index.php");
+}
+?>
+<center>
+
+<div id="crud">
+ <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    <form method="post">
+    <table align="center">
+    <tr>
+    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+    </tr>
+    <tr>
+    <td>
+    <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+    <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+    </td>
+    </tr>
+    </table>
+    </form>
+    
+</div>
+
+</center>
+
 
 
 
