@@ -1,5 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
 <?php
 include_once 'dbconfig.php';
 if(isset($_POST['btn-save']))
@@ -9,17 +7,33 @@ if(isset($_POST['btn-save']))
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
  // variables for input data
- 
+
+ // sql query for inserting data into database
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
  // sql query for inserting data into database
  
-        $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
- mysql_query($sql_query);
-        
-        // sql query for inserting data into database
- 
+ // sql query execution function
+ if(mysql_query($sql_query))
+ {
+  ?>
+  <script type="text/javascript">
+  alert('Data Are Inserted Successfully ');
+  window.location.href='index.php';
+  </script>
+  <?php
+ }
+ else
+ {
+  ?>
+  <script type="text/javascript">
+  alert('error occured while inserting your data');
+  </script>
+  <?php
+ }
+ // sql query execution function
 }
 ?>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -60,3 +74,4 @@ if(isset($_POST['btn-save']))
 
 </center>
 </body>
+</html>
