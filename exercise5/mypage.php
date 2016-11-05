@@ -141,7 +141,7 @@
 			border-radius: 5px;
 			background-color: #1F2837;
 			padding: 10px;
-			margin-top: 50px;
+			margin-top: 10px;
 			color: white;
 		}
     </style>
@@ -305,7 +305,7 @@ echo $gender;
 
 <!--ADDING DATA-->
 <?php
-include_once 'dbconfig.php';
+include_once 'mypagedb_config.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
@@ -319,12 +319,12 @@ if(isset($_POST['btn-save']))
  // sql query for inserting data into database
  
  // sql query execution function
- if(mysql_query($sql_query))
+ if(mysqli_query($con,$sql_query))
  {
   ?>
   <script type="text/javascript">
   alert('Data Are Inserted Successfully ');
-  window.location.href='index.php';
+  window.location.href='mypagedatabase.php';
   </script>
   <?php
  }
@@ -343,7 +343,7 @@ if(isset($_POST['btn-save']))
 
 </div>
 <div id="crud">
-<label>Hello There! Pls enter your information so i can check in my database table who visited my page! ^_^</label>
+<label>Hello There! Pls enter your information so i can store it inside my database! ^_^</label>
     <form method="post">
     <table align="center">
     <tr>
