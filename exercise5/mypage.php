@@ -1,8 +1,48 @@
+//ADDING DATA PHP CODE
+<?php
+include_once 'dbconfig.php';
+if(isset($_POST['btn-save']))
+{
+ // variables for input data
+ $first_name = $_POST['first_name'];
+ $last_name = $_POST['last_name'];
+ $city_name = $_POST['city_name'];
+ // variables for input data
+
+ // sql query for inserting data into database
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ // sql query for inserting data into database
+ 
+ // sql query execution function
+ if(mysqli_query($con,$sql_query))
+ {
+  ?>
+  <script type="text/javascript">
+  alert('Data Are Inserted Successfully ');
+  window.location.href='index.php';
+  </script>
+  <?php
+ }
+ else
+ {
+  ?>
+  <script type="text/javascript">
+  alert('error occured while inserting your data');
+  </script>
+  <?php
+ }
+ // sql query execution function
+}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+	
+	
     <style>
         table {
             width: 100%;
@@ -138,10 +178,6 @@
 </head>
 
 <body>
-
-
-
-
 
 
 <p id="Greetings">Welcome To My Page!</p>
@@ -297,6 +333,38 @@ echo $gender;
 ?>
 </div>
 
+<center>
+
+<div id="header">
+ <div id="content">
+    <label>CRUD Operations With PHP and MySql - By Cleartuts</label>
+    </div>
+</div>
+<div id="body">
+ <div id="content">
+    <form method="post">
+    <table align="center">
+    <tr>
+    <td align="center"><a href="index.php">back to main page</a></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="first_name" placeholder="First Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
+    </tr>
+    <tr>
+    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    </tr>
+    <tr>
+    <td><button type="submit" name="btn-save"><strong>SAVE</strong></button></td>
+    </tr>
+    </table>
+    </form>
+    </div>
+</div>
+
+</center>
 
 
 <h5>Here are some of my favorite websites.</h5>
