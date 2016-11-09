@@ -282,7 +282,7 @@ function test_input($data) {
 
 
 
-
+<!--
 <h2 class="guest-information">Enter guest information</h2>
 <div>
 <p><span class="error">* required field.</span></p>
@@ -307,9 +307,12 @@ function test_input($data) {
   <input type="submit" name="submit" value="Submit">  
 </form>
 </div>
+-->
 
+<!--
 <div class="output-information">
 <?php 
+/*
 echo "<h2>Guest Information:</h2>";
 echo $name;
 echo "<br>";
@@ -320,9 +323,10 @@ echo "<br>";
 echo $comment;
 echo "<br>";
 echo $gender;
+*/
 ?>
 </div>
-
+-->
 
 
 
