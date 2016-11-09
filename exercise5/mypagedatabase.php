@@ -97,6 +97,7 @@ function delete_id(id)
     <th>First Name</th>
     <th>Last Name</th>
     <th>City Name</th>
+	<th>Email Address</th>
     <th colspan="2">Operations</th>
     </tr>
     <?php
