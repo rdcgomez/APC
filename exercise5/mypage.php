@@ -307,7 +307,7 @@ function test_input($data) {
 echo "<h2>Guest Information:</h2>";
 echo $name;
 echo "<br>";
-echo $email;
+//echo $email;
 echo "<br>";
 echo $website;
 echo "<br>";
@@ -316,6 +316,10 @@ echo "<br>";
 echo $gender;
 ?>
 </div>
+
+
+
+
 
 <!--ADDING DATA-->
 <?php
@@ -326,10 +330,11 @@ if(isset($_POST['btn-save']))
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
+ $email = $_POST['email_address'];
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city) VALUES('$first_name','$last_name','$city_name')";
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address) VALUES('$first_name','$last_name','$city_name','$email')";
  // sql query for inserting data into database
  
  // sql query execution function
@@ -369,6 +374,16 @@ if(isset($_POST['btn-save']))
     <tr>
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
+	
+	<tr>
+    <td><input type="text" name="email_address" placeholder="Email Address" required /></td>
+    </tr>
+	
+	
+
+	
+	
+	
     <tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
