@@ -125,6 +125,12 @@ if(isset($_POST['btn-cancel']))
     <tr>
     <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
     </tr>
+	
+	
+	<tr>
+    <td><input type="text" name="email_address" placeholder="Email Address" value="<?php echo $fetched_row['email_address']; ?>" required /></td>
+    </tr>
+	
     <tr>
     <td>
     <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
