@@ -92,30 +92,32 @@ function delete_id(id)
 <label>VISITOR'S DATABASE</label>
     <table align="center">
     <tr>
-    <th colspan="5"><a href="mypage.php">Homepage</a></th>
+		<th colspan="7"><a href="mypage.php">Homepage</a></th>
     </tr>
     <th>First Name</th>
     <th>Last Name</th>
     <th>City Name</th>
 	<th>Email Address</th>
-    <th colspan="2">Operations</th>
+    <th colspan="3">Operations</th>
     </tr>
+	
     <?php
- $sql_query="SELECT * FROM users";
- $result_set=mysqli_query($con,$sql_query);
- while($row=mysqli_fetch_row($result_set))
- {
-  ?>
+	 $sql_query="SELECT * FROM users";
+	 $result_set=mysqli_query($con,$sql_query);
+	 while($row=mysqli_fetch_row($result_set))
+	{
+	?>
         <tr>
         <td><?php echo $row[1]; ?></td>
         <td><?php echo $row[2]; ?></td>
         <td><?php echo $row[3]; ?></td>
-  <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
+		<td><?php echo $row[4]; ?></td>
+		<td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
         </tr>
-        <?php
- }
- ?>
+		<?php
+	}
+	 ?>
     </table>
     
 </div>
