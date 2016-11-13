@@ -341,6 +341,8 @@ if(isset($_POST['btn-save']))
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
+ $contact_number = $_POST['contact_number'];
+ $comments_message = $_POST['comments_message'];
  // variables for input data
 
  // sql query for inserting data into database
