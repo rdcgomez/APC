@@ -114,6 +114,15 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 		}
+			input[type=number], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 		input[type=submit] {
 			width: 100%;
 			background-color: #64D004;
@@ -410,6 +419,7 @@ if(isset($_POST['btn-save']))
 	<tr>
     <td><input type="text" name="comments_message" placeholder="Comments" required /></td>
     </tr>
+	
 	
 	
 	
