@@ -404,7 +404,9 @@ if(isset($_POST['btn-save']))
     <td><input type="number" name="contact_number" placeholder="Contact Number" required /></td>
     </tr>
 	
-
+	<tr>
+    <td><input type="text" name="comments_message" placeholder="Comments" required /></td>
+    </tr>
 	
 	
 	
