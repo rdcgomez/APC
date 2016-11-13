@@ -16,11 +16,11 @@ if(isset($_POST['btn-update']))
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
  $contact_number = $_POST['contact_number'];
- 
+ $url_website = $_POST['url_website']; 
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "	UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email_address='$email',contact_number='$contact_number'
+ $sql_query = "	UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email_address='$email',contact_number='$contact_number',url_website='$url_website'
 				WHERE user_id= ".$_GET['edit_id'];
  // sql query for update data into database
  
@@ -135,7 +135,9 @@ if(isset($_POST['btn-cancel']))
 	<tr>
     <td><input type="number" name="contact_number" placeholder="Contact Number" value="<?php echo $fetched_row['contact_number']; ?>" /></td>
     </tr>
-	
+	<tr>
+    <td><input type="url" name="url_website" placeholder="Website" value="<?php echo $fetched_row['url_website']; ?>" /></td>
+    </tr>
 	
     <tr>
     <td>

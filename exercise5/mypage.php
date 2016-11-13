@@ -133,6 +133,15 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 		}
+		input[type=url], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 		input[type=submit] {
 			width: 100%;
 			background-color: #64D004;
@@ -360,13 +369,14 @@ if(isset($_POST['btn-save']))
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
+ $url_website = $_POST['url_website']; 
  $contact_number = $_POST['contact_number'];
  
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number) 
-				VALUES('$first_name','$last_name','$city_name','$email','$contact_number')";	
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,url_website) 
+				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$url_website')";	
  // sql query for inserting data into database
  
  // sql query execution function
@@ -418,6 +428,9 @@ if(isset($_POST['btn-save']))
     </tr>
 	<tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
+    </tr>
+	<tr>
+    <td><input type="url" name="url_website" placeholder="Website"  /></td>
     </tr>
 
 	 
