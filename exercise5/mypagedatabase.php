@@ -94,7 +94,7 @@ function delete_id(id)
 <label>VISITOR'S DATABASE</label>
     <table align="center">
     <tr>
-		<th colspan="15"><a href="mypage.php">Homepage</a></th>
+		<th colspan="10"><a href="mypage.php">Homepage</a></th>
     </tr>
     <th>First Name</th>
     <th>Last Name</th>
@@ -102,7 +102,7 @@ function delete_id(id)
 	<th>Email Address</th>
 	<th>Contact Number</th>
 	<th>Website</th>
-	<th>Gender</th
+	<th>Gender</th>
     <th colspan="3">Operations</th>
     </tr>
 	
