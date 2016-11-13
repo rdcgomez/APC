@@ -15,10 +15,15 @@ if(isset($_POST['btn-update']))
  $last_name = $_POST['last_name'];
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
+ $contact_number = $_POST['contact_number'];
+ $comments_message = $_POST['comments_message'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email_address='$email' WHERE user_id=".$_GET['edit_id'];
+ $sql_query = "	UPDATE users 
+				SET first_name='$first_name',last_name='$last_name',user_city='$city_name',
+								email_address='$email',$contact_number='contact_number',$comments_message='comments_message'
+				WHERE user_id= ".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
