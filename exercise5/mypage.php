@@ -142,6 +142,15 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 		}
+		input[type=email], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
 		input[type=submit] {
 			width: 100%;
 			background-color: #64D004;
@@ -371,12 +380,12 @@ if(isset($_POST['btn-save']))
  $email = $_POST['email_address'];
  $url_website = $_POST['url_website']; 
  $contact_number = $_POST['contact_number'];
- 
+ $gender = $_POST['gender'];
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,url_website) 
-				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$url_website')";	
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,url_website,gender) 
+				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$url_website','$gender')";	
  // sql query for inserting data into database
  
  // sql query execution function
@@ -421,7 +430,7 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="email_address" placeholder="Email Address" required /></td>
+    <td><input type="email" name="email_address" placeholder="Email Address" required /></td>
     </tr>
 	<tr>
     <td><input type="number" name="contact_number" placeholder="Contact Number" /></td>
@@ -430,14 +439,15 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
 	<tr>
-    <td><input type="url" name="url_website" placeholder="Website"  /></td>
+    <td><input type="url" name="url_website" placeholder="Website" /></td>
     </tr>
-
-	 
 	
-
-	
-	
+	<tr>
+    <td>
+		<input type="radio" name="gender" value="Female">Female
+		<input type="radio" name="gender" value="Male">Male
+	</td>
+    </tr>
 	
 
     <tr>
