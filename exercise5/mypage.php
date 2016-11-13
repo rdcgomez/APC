@@ -361,12 +361,12 @@ if(isset($_POST['btn-save']))
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
  $contact_number = $_POST['contact_number'];
- $comments_message = $_POST['comments_message'];
+ 
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,comments_message) 
-				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$comments_message')";	
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number) 
+				VALUES('$first_name','$last_name','$city_name','$email','$contact_number')";	
  // sql query for inserting data into database
  
  // sql query execution function
@@ -419,12 +419,7 @@ if(isset($_POST['btn-save']))
 	<tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
-	<tr>
-    <td>
-	<textarea name="comment" rows="10" cols="32" placeholder="  Comments"><?php echo $comments_message;?></textarea>
-	</td>
-		
-    </tr>
+
 	 
 	
 

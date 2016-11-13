@@ -16,13 +16,11 @@ if(isset($_POST['btn-update']))
  $city_name = $_POST['city_name'];
  $email = $_POST['email_address'];
  $contact_number = $_POST['contact_number'];
- $comments_message = $_POST['comments_message'];
+ 
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "	UPDATE users 
-				SET first_name='$first_name',last_name='$last_name',user_city='$city_name',
-								email_address='$email',$contact_number='contact_number',$comments_message='comments_message'
+ $sql_query = "	UPDATE users SET first_name='$first_name',last_name='$last_name',user_city='$city_name',email_address='$email',contact_number='$contact_number'
 				WHERE user_id= ".$_GET['edit_id'];
  // sql query for update data into database
  
@@ -79,7 +77,7 @@ if(isset($_POST['btn-cancel']))
             background-size:     cover;
             background-repeat:   no-repeat;
 			border-style: solid;
-			border-top-width: none;
+			
 			
 			border-left-width: 100px;
 			border-right-width: 100px;
@@ -131,11 +129,13 @@ if(isset($_POST['btn-cancel']))
     <tr>
     <td><input type="text" name="city_name" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
     </tr>
-	
-	
 	<tr>
     <td><input type="text" name="email_address" placeholder="Email Address" value="<?php echo $fetched_row['email_address']; ?>" required /></td>
     </tr>
+	<tr>
+    <td><input type="number" name="contact_number" placeholder="Contact Number" value="<?php echo $fetched_row['contact_number']; ?>" /></td>
+    </tr>
+	
 	
     <tr>
     <td>
