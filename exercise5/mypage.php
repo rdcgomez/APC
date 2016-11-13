@@ -346,7 +346,8 @@ if(isset($_POST['btn-save']))
  // variables for input data
 
  // sql query for inserting data into database
- $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address) VALUES('$first_name','$last_name','$city_name','$email')";
+ $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,comments_message) 
+				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$comments_message')";	
  // sql query for inserting data into database
  
  // sql query execution function
