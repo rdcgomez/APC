@@ -99,6 +99,16 @@
 			color: white;
 			font-size: 250%;
 		}
+		input[type=text-comment], select {
+			width: 20%;
+			padding: 50px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}	
+	
 		div {
 			border-radius: 5px;
 			background-color: #1F2837;
@@ -114,7 +124,7 @@
 			border-radius: 4px;
 			box-sizing: border-box;
 		}
-			input[type=number], select {
+		input[type=number], select {
 			width: 20%;
 			padding: 12px 20px;
 			margin: 8px 0;
@@ -391,6 +401,7 @@ if(isset($_POST['btn-save']))
     <form method="post">
     <table align="center">
     <tr>
+	
 	<td align="center"><a href="mypagedatabase.php">Check Database</a></td>
     </tr>
     <tr>
@@ -409,11 +420,14 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="comments_message" placeholder="Comments"  /></td>
+    <td>
+	<textarea name="comment" rows="10" cols="32" placeholder="  Comments"><?php echo $comments_message;?></textarea>
+	</td>
+		
     </tr>
+	 
 	
-	
-	
+
 	
 	
 	
