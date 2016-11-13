@@ -400,8 +400,13 @@ if(isset($_POST['btn-save']))
     <td><input type="text" name="email_address" placeholder="Email Address" required /></td>
     </tr>
 	
+	<tr>
+    <td><input type="number" name="contact_number" placeholder="Contact Number" required /></td>
+    </tr>
 	
 
+	
+	
 	
 	
 	
