@@ -361,15 +361,7 @@ if(isset($_POST['btn-save']))
  
  // sql query execution function
  
- if (empty($_POST["email"])) {
-    $email = "Email is required";
-  } else {
-    $email = test_input($_POST["email"]);
-    // check if e-mail address is well-formed
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $email = "Invalid email format"; 
-    }
-  }
+ 
  
  if(mysqli_query($con,$sql_query))
  {
@@ -407,27 +399,25 @@ if(isset($_POST['btn-save']))
     <tr>
     <td><input type="text" name="last_name" placeholder="Last Name" required /></td>
     </tr>
-	
 	<tr>
     <td><input type="text" name="email_address" placeholder="Email Address" required /></td>
     </tr>
-	
 	<tr>
-    <td><input type="number" name="contact_number" placeholder="Contact Number" required /></td>
+    <td><input type="number" name="contact_number" placeholder="Contact Number" /></td>
     </tr>
-	
 	<tr>
-    <td><input type="text" name="comments_message" placeholder="Comments" required /></td>
-    </tr>
-	
-	
-	
-	
-	
-	
-    <tr>
     <td><input type="text" name="city_name" placeholder="City" required /></td>
     </tr>
+	<tr>
+    <td><input type="text" name="comments_message" placeholder="Comments"  /></td>
+    </tr>
+	
+	
+	
+	
+	
+	
+
     <tr>
     <td><button type="submit" name="btn-save"><strong>Save</strong></button></td>
     </tr>
