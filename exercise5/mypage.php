@@ -348,6 +348,17 @@ if(isset($_POST['btn-save']))
  // sql query for inserting data into database
  
  // sql query execution function
+ 
+ if (empty($_POST["email"])) {
+    $email = "Email is required";
+  } else {
+    $email = test_input($_POST["email"]);
+    // check if e-mail address is well-formed
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $email = "Invalid email format"; 
+    }
+  }
+ 
  if(mysqli_query($con,$sql_query))
  {
   ?>
