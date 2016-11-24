@@ -11,18 +11,18 @@ if(isset($_GET['edit_id']))
 if(isset($_POST['btn-update']))
 {
  // variables for input data
- $first_name = $_POST['first_name'];
- $last_name = $_POST['last_name'];
- $user_city = $_POST['user_city'];
- $email = $_POST['email_address'];
- $contact_number = $_POST['contact_number'];
- $url_website = $_POST['url_website']; 
- $gender = $_POST['gender'];
+ $first_name 			= $_POST['first_name'];
+ $last_name 			= $_POST['last_name'];
+ $user_city 			= $_POST['user_city'];
+ $email 				= $_POST['email_address'];
+ $contact_number 		= $_POST['contact_number'];
+ $url_website 			= $_POST['url_website']; 
+ $gender 				= $_POST['gender'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "	UPDATE users SET first_name='$first_name', last_name='$last_name', user_city='$user_city',
-				email_address='$email', contact_number='$contact_number', url_website='$url_website', gender='$gender'
+ $sql_query = "	UPDATE users 
+				SET first_name='$first_name',last_name='$last_name',user_city='$user_city',email_address='$email',contact_number='$contact_number',url_website='$url_website',gender='$gender'
 				WHERE user_id= ".$_GET['edit_id'];
  // sql query for update data into database
  
