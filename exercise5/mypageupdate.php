@@ -17,6 +17,7 @@ if(isset($_POST['btn-update']))
  $email = $_POST['email_address'];
  $contact_number = $_POST['contact_number'];
  $url_website = $_POST['url_website']; 
+ $gender = $_POST['gender'];
  // variables for input data
 
  // sql query for update data into database
