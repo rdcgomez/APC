@@ -376,7 +376,7 @@ if(isset($_POST['btn-save']))
  // variables for input data
  $first_name = $_POST['first_name'];
  $last_name = $_POST['last_name'];
- $city_name = $_POST['user_city'];
+ $user_city = $_POST['user_city'];
  $email = $_POST['email_address'];
  $url_website = $_POST['url_website']; 
  $contact_number = $_POST['contact_number'];
@@ -385,7 +385,7 @@ if(isset($_POST['btn-save']))
 
  // sql query for inserting data into database
  $sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,url_website,gender) 
-				VALUES('$first_name','$last_name','$city_name','$email','$contact_number','$url_website','$gender')";	
+				VALUES('$first_name','$last_name','$user_city','$email','$contact_number','$url_website','$gender')";	
  // sql query for inserting data into database
  
  // sql query execution function
@@ -436,7 +436,7 @@ if(isset($_POST['btn-save']))
     <td><input type="number" name="contact_number" placeholder="Contact Number" /></td>
     </tr>
 	<tr>
-    <td><input type="text" name="city_name" placeholder="City" required /></td>
+    <td><input type="text" name="user_city" placeholder="City" required /></td>
     </tr>
 	<tr>
     <td><input type="url" name="url_website" placeholder="Website" /></td>
