@@ -1,12 +1,13 @@
 
 <!-- UPDATE FORM-->
 <?php
-include_once 'mypage_config.php';
+include_once 'mypagedb_config.php';
 if(isset($_GET['edit_id']))
 {
- $sql_query="SELECT * FROM users WHERE user_id=".$_GET['edit_id'];
+ $sql_query="SELECT * FROM users WHERE id=".$_GET['edit_id'];
  $result_set=mysqli_query($con,$sql_query);
  $fetched_row=mysqli_fetch_array($result_set);
+ echo $sql_query;
 }
 if(isset($_POST['btn-update']))
 {
@@ -23,7 +24,7 @@ if(isset($_POST['btn-update']))
  // sql query for update data into database
  $sql_query = "	UPDATE users 
 				SET first_name='$first_name',last_name='$last_name',user_city='$user_city',email_address='$email',contact_number='$contact_number',url_website='$url_website',gender='$gender'
-				WHERE user_id= ".$_GET['edit_id'];
+				WHERE id= ".$_GET['edit_id'];
  // sql query for update data into database
  
  // sql query execution function
