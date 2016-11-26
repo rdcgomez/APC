@@ -2,12 +2,12 @@
 <!-- UPDATE FORM-->
 <?php
 include_once 'mypagedb_config.php';
+
 if(isset($_GET['edit_id']))
 {
  $sql_query="SELECT * FROM users WHERE id=".$_GET['edit_id'];
  $result_set=mysqli_query($con,$sql_query);
  $fetched_row=mysqli_fetch_array($result_set);
- echo $sql_query;
 }
 if(isset($_POST['btn-update']))
 {
@@ -15,42 +15,42 @@ if(isset($_POST['btn-update']))
  $first_name 			= $_POST['first_name'];
  $last_name 			= $_POST['last_name'];
  $user_city 			= $_POST['user_city'];
- $email 				= $_POST['email_address'];
- $contact_number 		= $_POST['contact_number'];
- $url_website 			= $_POST['url_website']; 
- $gender 				= $_POST['gender'];
+ $email 				  = $_POST['email_address'];
+ $contact_number 	= $_POST['contact_number'];
+ $url_website 		= $_POST['url_website'];
+ $gender 				  = $_POST['gender'];
  // variables for input data
 
  // sql query for update data into database
- $sql_query = "	UPDATE users 
+ $sql_query = "	UPDATE users
 				SET first_name='$first_name',last_name='$last_name',user_city='$user_city',email_address='$email',contact_number='$contact_number',url_website='$url_website',gender='$gender'
 				WHERE id= ".$_GET['edit_id'];
  // sql query for update data into database
- 
+
  // sql query execution function
  if(mysqli_query($con,$sql_query))
  {
-  ?>
+?>
   <script type="text/javascript">
-  alert('Data Are Updated Successfully');
-  window.location.href='mypagedatabase.php';
+    alert('Data Are Updated Successfully');
+    window.location.href='mypagedatabase.php';
   </script>
-  <?php
+<?php
  }
  else
  {
   ?>
   <script type="text/javascript">
-  alert('error occured while updating data');
+    alert('error occured while updating data');
   </script>
   <?php
  }
  // sql query execution function
 }
-if(isset($_POST['btn-cancel']))
-{
- header("Location: mypagedatabase.php");
-}
+  if(isset($_POST['btn-cancel']))
+    {
+     header("Location: mypagedatabase.php");
+    }
 ?>
 
 
@@ -68,28 +68,30 @@ if(isset($_POST['btn-cancel']))
 			margin-top: 50px;
 			color: white;
 		}
+
 		td {
-            padding: 20px;
-            text-align: center;
-            border-bottom: 1px solid #ddd;
-            font-size: 150%;
-            color: white;
-        }
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      font-size: 150%;
+      color: white;
+    }
+
 		body {
-            background-image: url(images/destiny.jpg);
-            background-size:     cover;
-            background-repeat:   no-repeat;
+      background-image: url(images/destiny.jpg);
+      background-size:     cover;
+      background-repeat:   no-repeat;
 			border-style: solid;
-			
-			
 			border-left-width: 100px;
 			border-right-width: 100px;
 			border-top-color: white;
 			border-bottom-color: white;
-        }
+    }
+
 		table {
-            width: 100%;
-        }
+      width: 100%;
+    }
+
 		input {
 			width: 20%;
 			padding: 12px 20px;
@@ -99,6 +101,7 @@ if(isset($_POST['btn-cancel']))
 			border-radius: 4px;
 			box-sizing: border-box;;
 		}
+
 		button[type=submit] {
 			width: 49.5%;
 			background-color: #64D004;
@@ -109,52 +112,59 @@ if(isset($_POST['btn-cancel']))
 			border-radius: 4px;
 			cursor: pointer;
 		}
+
 		button[type=submit]:hover {
 			background-color: #45a049;
 		}
-    </style>
-	
+  </style>
 </head>
+
 <body>
 
 <center>
-
 <div id="crud">
  <label>UPDATE INFORMATION</label>
-    <form method="post">
-    <table align="center">
+  <form method="post">
+  <table align="center">
     <tr>
-    <td><input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required /></td>
+      <td>
+      <input type="text" name="first_name" placeholder="First Name" value="<?php echo $fetched_row['first_name']; ?>" required />
+      </td>
     </tr>
     <tr>
-    <td><input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required /></td>
+      <td>
+      <input type="text" name="last_name" placeholder="Last Name" value="<?php echo $fetched_row['last_name']; ?>" required />
+      </td>
     </tr>
     <tr>
-    <td><input type="text" name="user_city" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required /></td>
+      <td>
+      <input type="text" name="user_city" placeholder="City" value="<?php echo $fetched_row['user_city']; ?>" required />
+      </td>
     </tr>
-	<tr>
-    <td><input type="text" name="email_address" placeholder="Email Address" value="<?php echo $fetched_row['email_address']; ?>" required /></td>
+	  <tr>
+      <td>
+      <input type="text" name="email_address" placeholder="Email Address" value="<?php echo $fetched_row['email_address']; ?>" required />
+      </td>
     </tr>
-	<tr>
-    <td><input type="number" name="contact_number" placeholder="Contact Number" value="<?php echo $fetched_row['contact_number']; ?>" /></td>
+	  <tr>
+      <td>
+      <input type="number" name="contact_number" placeholder="Contact Number" value="<?php echo $fetched_row['contact_number']; ?>" />
+      </td>
     </tr>
-	<tr>
-    <td><input type="url" name="url_website" placeholder="Website" value="<?php echo $fetched_row['url_website']; ?>" /></td>
+	  <tr>
+      <td>
+      <input type="url" name="url_website" placeholder="Website" value="<?php echo $fetched_row['url_website']; ?>" />
+      </td>
     </tr>
-
-	
-	
     <tr>
-    <td>
-    <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
-    <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
-    </td>
+      <td>
+      <button type="submit" name="btn-update"><strong>UPDATE</strong></button>
+      <button type="submit" name="btn-cancel"><strong>Cancel</strong></button>
+      </td>
     </tr>
-    </table>
-    </form>
-    
+  </table>
+  </form>
 </div>
-
 </center>
 
 </body>
