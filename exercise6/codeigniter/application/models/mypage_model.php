@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class mypage_model extends CI_Model {
+	function databse(){
 <?php
 if(isset($_POST['btn-save']))
 {
@@ -40,5 +41,6 @@ if(isset($_POST['btn-save']))
    // sql query execution function
 }
   ?>
+	}
     }
 }
