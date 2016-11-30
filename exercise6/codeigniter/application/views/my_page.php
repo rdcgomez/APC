@@ -4,9 +4,152 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head lang="en">
-    <link href="mypageStyle.css" type="text/css" rel="stylesheet">
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   
+<style>
+		table {
+			width: 100%;
+		}
 
+		th, td {
+			padding: 20px;
+			text-align: center;
+			border-bottom: 1px solid #ddd;
+			font-size: 150%;
+			color: white;
+		}
+
+		th {
+			background-color: red;
+			color: white;
+			font-style: italic;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 500%;
+			font-family: Algerian;
+			color: white;
+		}
+
+		.Hobbies{
+			background-color: black;
+			position: relative;
+			width: 100%;
+			border: 5px solid black;
+			padding: 10px;
+			color: white;
+			font-size: 200%;
+		}
+		h5 {
+			color: white;
+			font-size: 100%;
+		}
+
+		#Greetings {
+			text-align: center;
+			font-size: 200%;
+			font-style: italic;
+			color: white;
+		}
+
+		a:link, a:visited {
+			background-color: red;
+			color: white;
+			padding: 12px 25px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+		}
+
+		a:hover, a:active {
+			background-color: black;
+		}
+
+		#my-hobbies {
+			text-align: center;
+			font-size: 250%;
+			color: white;
+		}
+
+		body {
+			background-image: url(images/destiny.jpg);
+			background-size:     cover;
+			background-repeat:   no-repeat;
+			background-position: center;
+			border-style: solid;
+			border-top-width: none;
+			border-left-width: 100px;
+			border-right-width: 100px;
+			border-top-color: white;
+			border-bottom-color: white;
+		}
+
+		input[type=text], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=number], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=url], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		input[type=email], select {
+			width: 20%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+
+		#crud {
+			border-radius: 5px;
+			background-color: #1F2837;
+			padding: 10px;
+			margin-top: 10px;
+			color: white;
+		}
+
+		button[type=submit] {
+			width: 100%;
+			background-color: #64D004;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+
+		button[type=submit]:hover {
+			background-color: #45a049;
+		}
+
+</style>
+   
 </head>
 
 <body>
