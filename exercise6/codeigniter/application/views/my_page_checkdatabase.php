@@ -81,7 +81,7 @@
     <table align="center">
     <tr>
   		<th colspan="10">
-        <a href="mypage.php">Homepage</a>
+        <a href="index.php/my_page">Homepage</a>
       </th>
     </tr>
 
