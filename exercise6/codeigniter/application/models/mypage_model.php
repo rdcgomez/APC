@@ -1,10 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class mypage_model extends CI_Model {
-    function get_images()
-    {
 <?php
-include_once 'mypagedb_config.php';
 if(isset($_POST['btn-save']))
 {
  // variables for input data
