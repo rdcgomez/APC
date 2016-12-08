@@ -116,9 +116,9 @@ if(isset($_GET['delete_id']))
 	{
 ?>
     <tr>
-        <td><?php echo $row[1]; ?></td>
-        <td><?php echo $row[2]; ?></td>
-        <td><?php echo $row[3]; ?></td>
+			<td><?php echo $row[1]; ?></td>
+			<td><?php echo $row[2]; ?></td>
+			<td><?php echo $row[3]; ?></td>
     		<td><?php echo $row[4]; ?></td>
     		<td><?php echo $row[5]; ?></td>
     		<td><?php echo $row[6]; ?></td>

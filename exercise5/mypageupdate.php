@@ -3,11 +3,15 @@
 <?php
 include_once 'mypagedb_config.php';
 
+
+  
 if(isset($_GET['edit_id']))
 {
+
  $sql_query="SELECT * FROM users WHERE id=".$_GET['edit_id'];
- $result_set=mysqli_query($con,$sql_query);
+ $result_set=mysqli_query($con,$sql_query); 
  $fetched_row=mysqli_fetch_array($result_set);
+
 }
 if(isset($_POST['btn-update']))
 {
@@ -15,10 +19,10 @@ if(isset($_POST['btn-update']))
  $first_name 			= $_POST['first_name'];
  $last_name 			= $_POST['last_name'];
  $user_city 			= $_POST['user_city'];
- $email 				  = $_POST['email_address'];
- $contact_number 	= $_POST['contact_number'];
- $url_website 		= $_POST['url_website'];
- $gender 				  = $_POST['gender'];
+ $email 				= $_POST['email_address'];
+ $contact_number 		= $_POST['contact_number'];
+ $url_website 			= $_POST['url_website'];
+ $gender 				= $_POST['gender'];
  // variables for input data
 
  // sql query for update data into database
