@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <table align="center">
     <tr>
 	  <td align="center">
-      <a href="index.php/my_page_checkdatabase">Check Database</a></td>
+      <a href="views/my_page_checkdatabase">Check Database</a></td>
     </tr>
 
     <tr>
