@@ -64,6 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 	<br>
 	<br>
+
 <center>
   <div id="crud">
     <label>Hello There! Pls enter your information so i can store it inside my database before you leave. Thank You! ^_^</label>
