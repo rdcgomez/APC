@@ -6,9 +6,9 @@ class mypagecheckdatabase extends CI_Controller {
     {
 
 		$this->load->model('mypage_add');
-    
+    $data['sql_query'] = $this->mypageadd->dbtuts();
     //load view and pass the data
-    $this->load->view('my_page_checkdatabase');
+    $this->load->view('my_page_checkdatabase', $data);
 
     }
 }
