@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <table align="center">
     <tr>
 	  <td align="center">
-      <a href="controllers/mypagecheckdatabase">Check Database</a></td>
+      <a href="mypagecheckdatabase">Check Database</a></td>
     </tr>
 
     <tr>

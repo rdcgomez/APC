@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CRUD Operations With PHP and MySql - By Cleartuts</title>
+<title>Visitors Database</title>
 	<style>
 		#crud {
   			border-radius: 5px;
@@ -84,7 +84,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <table align="center">
     <tr>
   		<th colspan="10">
-        <a href="controllers/mypage">Homepage</a>
+        <a href="mypage">Homepage</a>
       </th>
     </tr>
 
