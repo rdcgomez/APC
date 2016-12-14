@@ -4,12 +4,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html>
 <html>
 <head lang="en">
-<link rel = "stylesheet" type = "text/css" 
-   href = "<?php echo base_url(); ?>css/mypageStyle.css">
+
+<link rel = "stylesheet" href = "<?php echo base_url(); ?>/css/mypageStyle.css"/>
+
 
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
- 
-   
+
+
 </head>
 
 <body>
