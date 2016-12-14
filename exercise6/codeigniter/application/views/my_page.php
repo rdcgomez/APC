@@ -5,7 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html>
 <head lang="en">
 
-<link rel = "stylesheet" href = "<?php echo base_url(); ?>/css/mypageStyle.css"/>
+  <link rel = "stylesheet" type = "text/css"
+           href = "<?php echo base_url(); ?>css/mypageStyle.css">
 
 
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -37,32 +38,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <div class="Hobbies">My hobbies are:
 	<p id="Sports"></p>
-	<img src="images/basketball.jpeg" width="50%" alt = "Steph Curry and Lebron James"> <br>
+	<img src="<?php echo base_url(); ?>images/basketball.jpeg"  width="50%" alt = "Steph Curry and Lebron James" > <br>
 	<button type="button" onclick="document.getElementById('Sports').innerHTML = '1. Playing Basketball'">SHOW MY FIRST HOBBY!</button> <br>
 	<button type="button" onclick="document.getElementById('Sports').style.color = 'red'">Add Color to the Text!</button>
 
 	<p id="Instrument"></p>
-	<img src="images/guitar.jpg" width="50%" alt ="Guitar"> <br>
+	<img src="<?php echo base_url(); ?>images/guitar.jpg" width="50%" alt ="Guitar"> <br>
 	<button type="button" onclick="document.getElementById('Instrument').innerHTML = '2. Playing Musical Instruments'">SHOW MY SECOND HOBBY!</button><br>
 	<button type="button" onclick="document.getElementById('Instrument').style.color = 'blue'">Add Color to the Text!</button>
 
 	<p id="VideoGames"></p>
-	<img src="images/videogames.jpg" width="50%" alt ="Consoles"> <br>
+	<img src="<?php echo base_url(); ?>images/videogames.jpg" width="50%" alt ="Consoles"> <br>
 	<button type="button" onclick="document.getElementById('VideoGames').innerHTML = '3. Playing Video Games'">SHOW MY THIRD HOBBY!</button><br>
 	<button type="button" onclick="document.getElementById('VideoGames').style.color = 'green'">Add Color to the Text!</button>
 
 	<p id="Studying"></p>
-	<img src="images/books.jpg" width="30%" alt ="Books"> <br>
+	<img src="<?php echo base_url(); ?>images/books.jpg" width="30%" alt ="Books"> <br>
 	<button type="button" onclick="document.getElementById('Studying').innerHTML = '4. Studying'">SHOW MY FOURTH HOBBY!</button><br>
 	<button type="button" onclick="document.getElementById('Studying').style.color = 'orange'">Add Color to the Text!</button>
 
 	<p id="ReadingAnime"></p>
-	<img src="images/sample.jpg" height="500px" alt = "Trafalgar Law with Chopper"> <br>
+	<img src="<?php echo base_url(); ?>images/sample.jpg" height="500px" alt = "Trafalgar Law with Chopper"> <br>
 	<button type="button" onclick="document.getElementById('ReadingAnime').innerHTML = '5. Reading Manga'">SHOW MY FIFTH HOBBY!</button><br>
 	<button type="button" onclick="document.getElementById('ReadingAnime').style.color = 'yellow'">Add Color to the Text!</button>
 
 	<p id="Internet"></p>
-	<img src="images/web.jpg" width="50%" alt ="World Wide Web"> <br>
+	<img src="<?php echo base_url(); ?>images/web.jpg" width="50%" alt ="World Wide Web"> <br>
 	<button type="button" onclick="document.getElementById('Internet').innerHTML = '6. Surfing the net'">SHOW MY SIXTH HOBBY!</button><br>
   <button type="button" onclick="document.getElementById('Internet').style.color = 'pink'">Add Color to the Text!</button>
 
