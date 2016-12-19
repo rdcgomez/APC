@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<style>
 		body {
 		    background-image: url(images/destiny.jpg);
-			}
+		}
 	</style>
 <script type="text/javascript">
     function edt_id(id)
