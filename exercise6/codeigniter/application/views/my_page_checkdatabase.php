@@ -60,6 +60,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     		<td><?php echo $contact_number[5]; ?></td>
     		<td><?php echo $url_website[6]; ?></td>
     		<td><?php echo $gender[7]; ?></td>
+
 		    <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
     </tr>

@@ -20,7 +20,7 @@ class mypage_add extends CI_Model {
 			// sql query for inserting data into database
 
 			// sql query execution function
-		if($data[] = true){
+
 	       <script type="text/javascript">
 	       alert('Data Are Inserted Successfully ');
 	       window.location.href='mypagedatabase.php';
