@@ -13,7 +13,7 @@ class mypagecheckdatabase extends CI_Controller {
       //load view and pass the data
 
       // dito ka mag query
-      $data ['first_name']    => $_POST['first_name'];
+      $data ['first_name']    => $this->db->get['first_name'];
       $data ['last_name']			=> $_POST['last_name'];
   		$data ['user_city	']		=> $_POST['user_city'];
   		$data ['email']	        => $_POST['email_address'];
@@ -21,8 +21,9 @@ class mypagecheckdatabase extends CI_Controller {
   		$data ['url_website']		=> $_POST['url_website'];
   		$data ['gender'] 				=> $_POST['gender'];
 
+
       // Show submitted data in visitors database
-      $this->load->view("my_page_checkdatabase", $data);
+      $this->load->view("my_page_checkdatabase", $row);
 
 
     }
