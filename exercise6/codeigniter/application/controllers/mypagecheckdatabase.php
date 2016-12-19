@@ -11,16 +11,21 @@ class mypagecheckdatabase extends CI_Controller {
 
     public function index(){
       //load view and pass the data
-
+      $this->load->model("mypage_add");
       // dito ka mag query
       $data = array(
-        'title' => 'My title',
-        'name' => 'My Name',
-        'date' => 'My date');
+        $first_name    => $_POST['first_name'],
+        $last_name			=> $_POST['last_name'],
+  			$user_city			=> $_POST['user_city'],
+  			$email			    => $_POST['email_address'],
+  			$contact_number	=> $_POST['contact_number'],
+  			$url_website		=> $_POST['url_website'],
+  			$gender 				=> $_POST['gender']
+        );
 
       // tapos pasa mo sa view
       // Show submitted data in visitors database
-      $this->load->view("my_page_checkdatabase");
+      $this->load->view("my_page_checkdatabase", $data);
 
 
     }

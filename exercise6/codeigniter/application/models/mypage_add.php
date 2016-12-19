@@ -17,14 +17,10 @@ class mypage_add extends CI_Model {
 			// variables for input data
 
 			// sql query for inserting data into database
-			$sql_query = "INSERT INTO users(first_name,last_name,user_city,email_address,contact_number,url_website,gender)
-						 VALUES('$first_name','$last_name','$user_city','$email','$contact_number','$url_website','$gender')";
 			// sql query for inserting data into database
 
 			// sql query execution function
-			if(mysqli_query($con,$sql_query))
-	       {
-	     ?>
+		if($data[] = true){
 	       <script type="text/javascript">
 	       alert('Data Are Inserted Successfully ');
 	       window.location.href='mypagedatabase.php';

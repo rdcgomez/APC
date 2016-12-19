@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<link rel = "stylesheet" type = "text/css"
 				 href = "<?php echo base_url(); ?>css/mypagecheckdatabaseStyle.css">
-<title>Visitors Database</title>
+				 <title>Visitors Database</title>
 	<style>
 		body {
 		    background-image: url(images/destiny.jpg);
@@ -51,26 +51,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   	<th>Gender</th>
     <th colspan="3">Operations</th>
 
-<?php
-	 $sql_query="SELECT * FROM users";
-	 $result_set=mysqli_query($con,$sql_query);
-	 while($row=mysqli_fetch_row($result_set));
-	{
-?>
+
     <tr>
-        <td><?php echo $row[1]; ?></td>
-        <td><?php echo $row[2]; ?></td>
-        <td><?php echo $row[3]; ?></td>
-    		<td><?php echo $row[4]; ?></td>
-    		<td><?php echo $row[5]; ?></td>
-    		<td><?php echo $row[6]; ?></td>
-    		<td><?php echo $row[7]; ?></td>
+        <td><?php echo $first_name[1]; ?></td>
+        <td><?php echo $last_name[2]; ?></td>
+        <td><?php echo $user_city[3]; ?></td>
+    		<td><?php echo $email[4]; ?></td>
+    		<td><?php echo $contact_number[5]; ?></td>
+    		<td><?php echo $url_website[6]; ?></td>
+    		<td><?php echo $gender[7]; ?></td>
 		    <td align="center"><a href="javascript:edt_id('<?php echo $row[0]; ?>')"><img src="b_edit.png" align="EDIT" /></a></td>
         <td align="center"><a href="javascript:delete_id('<?php echo $row[0]; ?>')"><img src="b_drop.png" align="DELETE" /></a></td>
     </tr>
-<?php
-	}
-?>
+
     </table>
 </div>
 </center>
