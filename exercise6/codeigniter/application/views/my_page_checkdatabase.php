@@ -4,60 +4,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+	<link rel = "stylesheet" type = "text/css"
+				 href = "<?php echo base_url(); ?>css/mypagecheckdatabaseStyle.css">
 <title>Visitors Database</title>
 	<style>
-		#crud {
-  			border-radius: 5px;
-  			background-color: #1F2837;
-  			padding: 10px;
-  			margin-top: 50px;
-  			color: white;
-		}
-
-		table {
-        width: 100%;
-    }
-
-    th, td {
-        padding: 20px;
-        text-align: center;
-        border-bottom: 1px solid #ddd;
-        font-size: 150%;
-        color: white;
-    }
-
-    th {
-        background-color: red;
-        color: white;
-        font-style: italic;
-    }
-
 		body {
-        background-image: url(images/destiny.jpg);
-        background-size:     cover;
-        background-repeat:   no-repeat;
-			  border-style: solid;
-			  border-top-width: none;
-			  border-left-width: 0px;
-			  border-right-width: 0px;
-			  border-top-color: white;
-			  border-bottom-color: white;
-    }
-
-		a:link, a:visited {
-        background-color: red;
-        color: white;
-        padding: 12px 25px;
-        text-align: center;
-        display: inline-block;
-    }
-
-    a:hover, a:active {
-        background-color: black;
-    }
-    </style>
-
+		    background-image: url(images/destiny.jpg);
+			}
+	</style>
 <script type="text/javascript">
     function edt_id(id)
     {
