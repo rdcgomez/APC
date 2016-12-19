@@ -54,4 +54,3 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['profiler'] = "Profiler_controller";
 $route['profiler/disable'] = "Profiler_controller/disable";
-$route['validation'] = 'Form';
