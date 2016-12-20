@@ -17,10 +17,11 @@ class mypagecheckdatabase extends CI_Controller {
       //pass the data
       $data array(
         $data ['query'] = $this->load->show_data_in_visitorspage()
+        $row = $data
       );
 
       //load view
-      $this->load->view("my_page_checkdatabase", $data);
+      $this->load->view("my_page_checkdatabase", $row);
 
     }
 
