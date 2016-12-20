@@ -10,12 +10,9 @@ class mypage extends CI_Controller {
 
     public function index(){
       //load view and pass the data
-      $this->load->view('my_page');
       $this->load->model("mypageModel");
-      $data array(
-        ['query'] = $this->mypageModel->save_button_pressed();
-      );
-      $this->load->view('my_page', $data);
+  
+      $this->load->view('my_page';
 
 
 
