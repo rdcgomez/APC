@@ -9,7 +9,11 @@ class mypageModel extends CI_Model {
                 $this->load->helper('url');
         }
 
-        public function sample(){
+        public function save_button_pressed(){
+
+        }
+
+        public function show_data_in_visitorspage(){
 
         }
 
