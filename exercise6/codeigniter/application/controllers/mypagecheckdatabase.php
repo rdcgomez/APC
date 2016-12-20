@@ -13,13 +13,13 @@ class mypagecheckdatabase extends CI_Controller {
       //load view and pass the data
 
       // dito ka mag query
-      $data ['first_name']    => $this->db->get['first_name'];
-      $data ['last_name']			=> $_POST['last_name'];
-  		$data ['user_city	']		=> $_POST['user_city'];
-  		$data ['email']	        => $_POST['email_address'];
-  		$data ['contact_number']=> $_POST['contact_number'];
-  		$data ['url_website']		=> $_POST['url_website'];
-  		$data ['gender'] 				=> $_POST['gender'];
+      ['first_name']    => $this->db->get['first_name'];
+      ['last_name']			=> $_POST['last_name'];
+  	  ['user_city	']		=> $_POST['user_city'];
+  		['email']	        => $_POST['email_address'];
+      ['contact_number']=> $_POST['contact_number'];
+  		['url_website']		=> $_POST['url_website'];
+  		['gender'] 				=> $_POST['gender'];
 
 
       // Show submitted data in visitors database

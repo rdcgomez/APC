@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <center>
   <div id="crud">
     <label>Hello There! Pls enter your information so i can store it inside my database before you leave. Thank You! ^_^</label>
-    <form method="post" action="<?php echo base_url();?>/mypagecheckdatabase">
+    <!-- <form method="post" action="<?php echo base_url();?>/mypagecheckdatabase"> -->
     <table align="center">
     <tr>
 	  <td align="center">

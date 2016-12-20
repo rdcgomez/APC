@@ -12,6 +12,10 @@ class mypage extends CI_Controller {
       //load view and pass the data
       $this->load->view('my_page');
 
+
+
+
+
     }
 
     /*public function data_submitted() {
