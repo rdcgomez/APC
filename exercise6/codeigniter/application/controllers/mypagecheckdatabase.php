@@ -7,27 +7,20 @@ class mypagecheckdatabase extends CI_Controller {
       parent:: __construct();
       $this->load->helper('url');
     }
-  
+
 
     public function index(){
-      //load view and pass the data
 
-
-      /*
-      ['first_name']    => $this->db->get['first_name'];
-      ['last_name']			=> $_POST['last_name'];
-  	  ['user_city	']		=> $_POST['user_city'];
-  		['email']	        => $_POST['email_address'];
-      ['contact_number']=> $_POST['contact_number'];
-  		['url_website']		=> $_POST['url_website'];
-  		['gender'] 				=> $_POST['gender'];
-      */
 
       // Show submitted data in visitors database
-      $this->load->view("my_page_checkdatabase");
       $this->load->model("mypageModel");
-      $this->load->show_data_in_visitorspage();
+      //pass the data
+      $data array(
+        $data ['query'] = $this->load->show_data_in_visitorspage()
+      );
 
+      //load view
+      $this->load->view("my_page_checkdatabase", $data);
 
     }
 
