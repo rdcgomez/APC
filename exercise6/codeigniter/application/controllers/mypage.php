@@ -28,3 +28,4 @@ class mypage extends CI_Controller {
     }*/
 
 }
+?>

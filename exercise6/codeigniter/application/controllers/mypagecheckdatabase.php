@@ -29,3 +29,4 @@ class mypagecheckdatabase extends CI_Controller {
 
 
 }
+?>
