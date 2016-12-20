@@ -51,7 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   	<th>Gender</th>
     <th colspan="3">Operations</th>
 
-
     <tr>
         <td><?php echo $row[1]; ?></td>
         <td><?php echo $row[2]; ?></td>

@@ -6,10 +6,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head lang="en">
     <link rel = "stylesheet" type = "text/css"
            href = "<?php echo base_url(); ?>css/mypageStyle.css">
+
            <title>Homepage</title>
+
     <style>
-    body {
-    background-image:     url(images/destiny.jpg);
+        body {
+        background-image:     url(images/destiny.jpg);
     }
     </style>
 

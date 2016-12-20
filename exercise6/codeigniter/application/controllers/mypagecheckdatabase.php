@@ -6,6 +6,7 @@ class mypagecheckdatabase extends CI_Controller {
     public function __construct() {
       parent:: __construct();
       $this->load->helper('url');
+      $this->load->helper('array');
     }
 
 
@@ -15,10 +16,10 @@ class mypagecheckdatabase extends CI_Controller {
       // Show submitted data in visitors database
       $this->load->model("mypageModel");
       //pass the data
-      $data array(
-        $data ['query'] = $this->load->show_data_in_visitorspage()
-        $row = $data
-      );
+      $data ['query'] = $this->load->show_data_in_visitorspage();
+      $data->$row;
+
+
 
       //load view
       $this->load->view("my_page_checkdatabase", $row);

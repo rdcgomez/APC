@@ -6,13 +6,14 @@ class mypage extends CI_Controller {
     public function __construct() {
       parent:: __construct();
       $this->load->helper('url');
+      $this->load->helper('array');
     }
 
     public function index(){
       //load view and pass the data
       $this->load->model("mypageModel");
-  
-      $this->load->view('my_page';
+
+      $this->load->view('my_page');
 
 
 
