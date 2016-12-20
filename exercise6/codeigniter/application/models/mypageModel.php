@@ -10,7 +10,8 @@ class mypageModel extends CI_Model {
         }
 
         public function save_button_pressed(){
-          
+          $query = $this->db->query('SELECT * FROM users');
+          return $query->result();
         }
 
         public function show_data_in_visitorspage(){
