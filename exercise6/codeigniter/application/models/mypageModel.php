@@ -10,7 +10,7 @@ class mypageModel extends CI_Model {
         }
 
         public function save_button_pressed(){
-
+          
         }
 
         public function show_data_in_visitorspage(){

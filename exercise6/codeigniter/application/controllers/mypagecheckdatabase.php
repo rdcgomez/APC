@@ -26,6 +26,8 @@ class mypagecheckdatabase extends CI_Controller {
       // Show submitted data in visitors database
       $this->load->view("my_page_checkdatabase");
       $this->load->model("mypageModel");
+      
+
     }
 
 
