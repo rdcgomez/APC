@@ -12,7 +12,7 @@ class mypageModel extends CI_Model {
         }
 
         public function save_button_pressed(){
-          $query = $this->db->query('SELECT * FROM users');
+          $query = $this->db->get('users');
           $data = array(
             'first_name' => $first_name,
             'last_name' => $last_name,
