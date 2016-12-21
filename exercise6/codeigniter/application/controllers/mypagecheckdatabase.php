@@ -15,15 +15,17 @@ class mypagecheckdatabase extends CI_Controller {
 
 
       // Show submitted data in visitors database
-      $this->load->model("mypageModel");
       //pass the data
-      $data ['query'] = $this->load->show_data_in_visitorspage();
-
+      $query = $this->db->get('users');
+      foreach ($query->result() as $row)
+        {
+          $row;
+        }
 
 
 
       //load view
-      $this->load->view("my_page_checkdatabase", $data);
+      $this->load->view("my_page_checkdatabase", $row);
 
     }
 
