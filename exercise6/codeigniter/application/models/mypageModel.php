@@ -15,8 +15,8 @@ class mypageModel extends CI_Model {
         }
 
         public function show_data_in_visitorspage(){
-          $query = $this->db->query('SELECT * FROM users')
-          return $query->result();
+          $query = $this->db->query('SELECT * FROM users');
+
         }
 
 }
