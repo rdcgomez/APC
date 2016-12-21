@@ -2,14 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class mypageModel extends CI_Model {
-        public $first_name;
-        public  $last_name;
-        public  $user_city;
-        public  $email;
-        public        $contact_number;
-        public        $url_website;
-        public        $gender;
-        public        $user_city;
+
 
         public function __construct()
         {
@@ -35,7 +28,7 @@ class mypageModel extends CI_Model {
         }
 
         public function show_data_in_visitorspage(){
-          $query = $this->db->query('SELECT * FROM users');
+          $query = $this->db->get('users');
 
         }
 
