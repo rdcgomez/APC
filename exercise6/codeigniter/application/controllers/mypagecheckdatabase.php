@@ -8,6 +8,7 @@ class mypagecheckdatabase extends CI_Controller {
       $this->load->helper('url');
       $this->load->helper('array');
       $this->load->model("mypageModel");
+      $this->load->database();
     }
 
 
