@@ -2,11 +2,20 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class mypageModel extends CI_Model {
+        public $first_name;
+        public  $last_name;
+        public  $user_city;
+        public  $email;
+        public        $contact_number;
+        public        $url_website;
+        public        $gender;
+        public        $user_city;
 
         public function __construct()
         {
                 parent::__construct();
                 $this->load->helper('url');
+                $this->load->database();
         }
 
         public function save_button_pressed(){
@@ -19,10 +28,8 @@ class mypageModel extends CI_Model {
             'contact_number' => $contact_number,
             'url_website' => $url_website,
             'gender' => $gender
-
           );
-
-          $this->db->insert('users', $data)
+          $this->db->insert('users', $data);
 
 
         }
