@@ -19,14 +19,14 @@ class mypagecheckdatabase extends CI_Controller {
       //pass the data
       $query = $this->db->get('users');
       foreach ($query->result() as $row)
-        {
-          $row;
-        }
-
+      {
+        $row;
+      }
+        $this->load->view("my_page_checkdatabase", $row);
 
 
       //load view
-      $this->load->view("my_page_checkdatabase", $row);
+
 
     }
 
